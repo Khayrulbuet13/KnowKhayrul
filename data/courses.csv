@@ -1,0 +1,81 @@
+ID,CourseID,CourseName,CourseGrade
+2,ME450,"Computational Fluid Dynamics",A
+2,ME402,"Advance Manufacturing Science",A
+2,ME453,"Math Methods In Engr II",A-
+2,BIOE497,"Clinical Projects in BIOE",A-
+2,ME430,"Advanced Fluid Mechanics",A-
+2,ME452,"Math Methods In Engr I",A
+2,ME423,"Heat & Mass Transfer",B+
+2,MECH495,"Advanced Finite Elements",A-
+2,ISE364,"Intro to Mach Learning",A
+2,ME490,"Thesis",A
+1,ME450,"Computational Fluid Dynamics",A
+1,ME402,"Advance Manufacturing Science",A
+1,ME453,"Math Methods In Engr II",A-
+1,ME430,"Advanced Fluid Mechanics",A-
+1,ME452,"Math Methods In Engr I",A
+1,ME423,"Heat & Mass Transfer",B+
+1,MECH495,"Advanced Finite Elements",A-
+1,ISE364,"Intro to Mach Learning",A
+1,ME440,"General Examination",A
+4,CHEM114,"Inorganic Quantitative Analysis Sessional",A-
+4,CHEM119,"Chemistry 1",A-
+4,HUM102,"English Language Practice",B+
+4,HUM211,"Sociology",A-
+4,IPE105,"Principles of Cost and Management Accounting",A
+4,MATH191,"Differential and Integral Calculus",A-
+4,ME160,"Mechanical Engineering Drawing 1",A
+4,PHY117,"Structure of Matter", Electricity
+4,SHOP170,"Machine Shop",A
+4,CHEM143,"Chemistry of Materials",A-
+4,EEE167,"Basic Electrical and Electronic Circuit",A
+4,EEE168,"Basic Electrical and Electronic Circuit Sessional",A-
+4,IPE104,"Engineering Graphics",A
+4,MATH193,"Vector", Matrix and Solid Geometry
+4,MME195,"Engineering Materials I",A
+4,PHY102,"Physics Sessional",A-
+4,PHY163,"Waves and Oscillations", Physical Optics and Wave Mechanics
+4,SHOP160,"Foundry and Welding Shop",B
+4,CSE295,"Computer Programming Techniques",B+
+4,CSE296,"Computer Programming Techniques Sessional",A-
+4,EEE271,"Electrical Machines and Electronics",A-
+4,EEE272,"Electrical Machines and Electronics Sessional",A
+4,IPE204,"Engineering Graphics and Introduction to CAD Sessional",A-
+4,MATH291,"Differential Equation", Vector Calculus and Laplace Transform
+4,ME245,"Engineering Mechanics and Theory of Machines",B+
+4,MME295,"Engineering Materials II",B+
+4,MME296,"Engineering Materials Sessional",A-
+4,HUM277,"Fundamentals of Economics",A
+4,IPE301,"Measurement", Instrumentation and Control
+4,IPE302,"Measurement", Instrumentation and Control Sessional
+4,IPE305,"Manufacturing Process II",B+
+4,IPE306,"Manufacturing Processes II Sessional",A-
+4,IPE307,"Operations Research",B
+4,ME223,"Fluid Mechanics and Machinery",B
+4,ME224,"Fluid Mechanics and Machinery Sessional",B+
+4,IPE303,"Product Design I",A-
+4,IPE304,"Product Design I Sessional",B+
+4,IPE311,"Material Handling and Maintenance Management",B+
+4,IPE312,"Material Handling and Maintenance Management Sessional",A-
+4,IPE315,"Operations Management",B+
+4,IPE319,"Quality Management",A-
+4,IPE320,"Quality Management Sessional",A
+4,IPE322,"Business Communication Seminar-I",A-
+4,IPE329,"Numerical Analysis",A-
+4,IPE300,"Industrial Practice",A
+4,IPE317,"Product Design II",B+
+4,IPE318,"Product Design II Sessional",A-
+4,IPE400,"Project and Thesis",A
+4,IPE403,"Project and Environmental Management",B
+4,IPE407,"Ergonomics and Safety management",B
+4,IPE408,"Ergonomics and Safety Management Sessional",B+
+4,IPE419,"Computer Integrated Manufacturing",A-
+4,IPE451,"Supply Chain Management",B-
+4,IPE401,"Machine Tools",B+
+4,IPE402,"Machine Tools Sessional",A-
+4,IPE409,"CAD/CAM",B
+4,IPE410,"CAD/CAM Sessional",B+
+4,IPE411,"Industrial and Business Management",B
+4,IPE427,"Marketing Management",B
+4,IPE470,"Industrial Simulation Sessional",B+
+4,IPE480,"Business Communication Seminar II",B+
