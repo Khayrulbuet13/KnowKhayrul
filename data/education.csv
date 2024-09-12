@@ -1,4 +1,4 @@
-ID,Institution,Location,Degree,GPA,StartDate,EndDate,Awards,ThesisTitle
+Education_ID,Institution,Location,Degree,GPA,StartDate,EndDate,Awards,ThesisTitle
 1,Lehigh University,"Pennsylvania, USA",Ph.D. in Mechanical Engineering and Mechanics,3.84/4.00,Jan 2021,Current,P.C. Rossin College of Engineering fellowship,
 2,Lehigh University,"Pennsylvania, USA",M.S. in Mechanical Engineering and Mechanics,3.84/4.00,Jan 2021,May 2023,,Predicting Drug Loading in Extracellular Vesicles through Coarse-Grained Molecular Dynamics Simulation
 3,IBM,Online,Professional Certificate in Data Science,,,Aug 2024,,
