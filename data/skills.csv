@@ -35,7 +35,7 @@ ID,skill,skill_type
 34,HPC Cluster Management,Data Analysis and Machine Learning
 35,High-Performance Computing,Data Analysis and Machine Learning
 36,Parallel Computing,Data Analysis and Machine Learning
-37,Cloud Computing (AWS, Azure, GCP),Data Analysis and Machine Learning
+37,"Cloud Computing[AWS, Azure]",Data Analysis and Machine Learning
 38,Data Structures and Algorithms,Data Analysis and Machine Learning
 39,Object-Oriented Programming,Data Analysis and Machine Learning
 40,Analytical Thinking,Soft Skills
