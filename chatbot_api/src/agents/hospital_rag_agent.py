@@ -1,7 +1,6 @@
 import os
 from chains.education_chain import education_chain
 from chains.papers_chain import papers_chain
-from chains.hospital_review_chain import reviews_vector_chain
 from langchain import hub
 from langchain.agents import AgentExecutor, Tool, create_openai_functions_agent
 from langchain_openai import ChatOpenAI
@@ -15,19 +14,7 @@ HOSPITAL_AGENT_MODEL = os.getenv("HOSPITAL_AGENT_MODEL")
 hospital_agent_prompt = hub.pull("hwchase17/openai-functions-agent")
 
 tools = [
-    Tool(
-        name="Experiences",
-        func=reviews_vector_chain.invoke,
-        description="""Useful when you need to answer questions
-        about patient experiences, feelings, or any other qualitative
-        question that could be answered about a patient using semantic
-        search. Not useful for answering objective questions that involve
-        counting, percentages, aggregations, or listing facts. Use the
-        entire prompt as input to the tool. For instance, if the prompt is
-        "Are patients satisfied with their care?", the input should be
-        "Are patients satisfied with their care?".
-        """,
-    ),
+    
 
     Tool(
         name="EducationGraph",

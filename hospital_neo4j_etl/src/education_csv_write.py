@@ -1,5 +1,5 @@
 import logging
-import os, json, requests
+import os, requests
 from neo4j import GraphDatabase
 from retry import retry
 

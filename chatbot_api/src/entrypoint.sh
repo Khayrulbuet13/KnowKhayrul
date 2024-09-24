@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Generate the vector store
+echo "Generating vector store..."
+python /app/generate_vector_store.py
+
 # Run any setup steps or pre-processing tasks here
 echo "Starting hospital RAG FastAPI service..."
 
