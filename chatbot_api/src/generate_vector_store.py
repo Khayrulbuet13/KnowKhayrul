@@ -34,7 +34,7 @@ class DocumentVectorizer:
         text_chunks = text_splitter.split_documents(documents)
         text_contents = [doc.page_content for doc in text_chunks]
         metadatas = [doc.metadata for doc in text_chunks]
-        # print(f'metadata: {metadatas}')
+        print(f'metadata: {metadatas}')
 
         # Define collection-level metadata
         collection_metadata = {
