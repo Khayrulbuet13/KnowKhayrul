@@ -21,7 +21,9 @@ with st.sidebar:
     )
 
     st.header("Example Questions")
-    st.markdown("- Which hospitals are in the hospital system?")
+    st.markdown("- Can you describe the key methodologies and techniques you utilized \
+                in your most recent publication on 'Multiplex Image Machine Learning'?")
+    
     st.markdown(
         """- What is the current wait time at wallace-hamilton hospital?"""
     )
@@ -74,10 +76,12 @@ with st.sidebar:
     )
 
 
-st.title("Hospital System Chatbot")
+st.title("AskKhayrul!")
 st.info(
-    """Ask me questions about patients, visits, insurance payers, hospitals,
-    physicians, reviews, and wait times!"""
+    """Hello! I'm AskKhayrul, Khayrul's AI assistant. I'm here to provide 
+    information about his background, education, work experience, and publications.
+    I'll respond as if I’m Khayrul himself, so please feel free to ask any questions!
+"""
 )
 
 if "messages" not in st.session_state:

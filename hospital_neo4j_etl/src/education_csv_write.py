@@ -4,21 +4,10 @@ from neo4j import GraphDatabase
 from retry import retry
 
 # Environment variables
-# Set the environment variables directly in the script for clarity and testing purposes
-os.environ['EDUCATION_CSV_PATH'] = 'https://raw.githubusercontent.com/Khayrulbuet13/KnowKhayrul/main/data/education.csv'
-os.environ['COURSES_CSV_PATH'] = 'https://raw.githubusercontent.com/Khayrulbuet13/KnowKhayrul/main/data/courses.csv'
-os.environ['PAPERS_JSON_PATH'] = 'https://raw.githubusercontent.com/Khayrulbuet13/KnowKhayrul/main/data/papers.json'
-os.environ['SKILLS_CSV_PATH'] = 'https://raw.githubusercontent.com/Khayrulbuet13/KnowKhayrul/main/data/skills.csv'
-
-
-
 EDUCATION_CSV_PATH = os.getenv("EDUCATION_CSV_PATH")
 COURSES_CSV_PATH = os.getenv("COURSES_CSV_PATH")
 PAPERS_JSON_PATH = os.getenv("PAPERS_JSON_PATH")
 SKILLS_CSV_PATH = os.getenv("SKILLS_CSV_PATH")
-
-
-
 NEO4J_URI = os.getenv("NEO4J_URI")
 NEO4J_USERNAME = os.getenv("NEO4J_USERNAME")
 NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD")
