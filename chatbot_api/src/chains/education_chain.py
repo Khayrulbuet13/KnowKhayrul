@@ -134,6 +134,7 @@ education_chain = GraphCypherQAChain.from_llm(
     cypher_llm=ChatOpenAI(model=CYPHER_MODEL, temperature=0),
     qa_llm=ChatOpenAI(model=QA_MODEL, temperature=0),
     graph=graph,
+    allow_dangerous_requests=True,
     verbose=True,
     qa_prompt=qa_generation_prompt,
     cypher_prompt=cypher_generation_prompt,

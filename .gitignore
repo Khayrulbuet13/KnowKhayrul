@@ -1,2 +1,3 @@
 .env
 chatbot_api/vector_store
+chatbot_api/dump
