@@ -2,24 +2,18 @@ import time
 
 import requests
 
-CHATBOT_URL = "http://localhost:8000/hospital-rag-agent"
+CHATBOT_URL = "http://localhost:8000/chatbot-rag-agent"
 
 questions = [
-    "What is the current wait time at wallace-hamilton hospital?",
-    "Which hospital has the shortest wait time?",
-    "At which hospitals are patients complaining about billing and insurance issues?",  # E501
-    "What is the average duration in days for emergency visits?",
-    "What are patients saying about the nursing staff at Castaneda-Hardy?",
-    "What was the total billing amount charged to each payer for 2023?",
-    "What is the average billing amount for medicaid visits?",
-    "How many patients has Dr. Ryan Brown treated?",
-    "Which physician has the lowest average visit duration in days?",
-    "How many visits are open and what is their average duration in days?",
-    "Have any patients complained about noise?",
-    "How much was billed for patient 789's stay?",
-    "Which physician has billed the most to cigna?",
-    "Which state had the largest percent increase in medicaid visits from 2022 to 2023?",  # E501
+    "Could you provide an overview of your educational background?",
+    "Can you elaborate on the methodologies and techniques you employed in your recent publication on 'Multiplex Image Machine Learning'?",
+    "Could you explain the main concept and significance of your paper titled 'Multiplex Image Machine Learning'?",
+    "Can you share insights into your master’s thesis and its key contributions?",
+    "Tell me about your research during your Ph.D.?",
+    "Did your coursework include any subjects related to machine learning?",
+    "Where did you complete your master's degree, and what was the focus of your studies?",
 ]
+
 
 request_bodies = [{"text": q} for q in questions]
 

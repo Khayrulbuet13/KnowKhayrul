@@ -1,9 +1,9 @@
 version: '3'
 
 services:
-  hospital_neo4j_etl:
+  chatbot_neo4j_etl:
     build:
-      context: ./hospital_neo4j_etl
+      context: ./chatbot_neo4j_etl
     env_file:
       - .env
 
@@ -13,7 +13,7 @@ services:
     env_file:
       - .env
     depends_on:
-      - hospital_neo4j_etl
+      - chatbot_neo4j_etl
     ports:
       - "8000:8000"
 

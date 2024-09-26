@@ -156,7 +156,7 @@ WHERE s.skill_type IN ['Programming Languages', 'Tools and Libraries'] AND toLow
 RETURN DISTINCT s.skill AS skill_used
 
 # Can you share insights into your master’s thesis and its key contributions?
-MATCH (p:Paper) WHERE p.title CONTAINS toLower('thesis')
+MATCH (p:Paper) WHERE toLower(p.title) CONTAINS toLower('thesis')
 RETURN p.title AS thesis_title, p.abstract_novelty AS thesis_con, p.abstract_challenge AS thesis_challenge, p.abstract_result AS thesis_result
 
 

@@ -5,14 +5,11 @@ from tools.papersQA import papers_qa_chain
 from langchain import hub
 from langchain.agents import AgentExecutor, Tool, create_openai_functions_agent
 from langchain_openai import ChatOpenAI
-from tools.wait_times import (
-    get_current_wait_times,
-    get_most_available_hospital,
-)
+
 
 AGENT_MODEL = os.getenv("AGENT_MODEL")
 
-hospital_agent_prompt = hub.pull("hwchase17/openai-functions-agent")
+chatbot_agent_prompt = hub.pull("hwchase17/openai-functions-agent")
 
 # Define the wrapper function
 def papers_qa_tool_func(input_text):
@@ -96,14 +93,14 @@ chat_model = ChatOpenAI(
     temperature=0,
 )
 
-hospital_rag_agent = create_openai_functions_agent(
+chatbot_rag_agent = create_openai_functions_agent(
     llm=chat_model,
-    prompt=hospital_agent_prompt,
+    prompt=chatbot_agent_prompt,
     tools=tools,
 )
 
-hospital_rag_agent_executor = AgentExecutor(
-    agent=hospital_rag_agent,
+chatbot_rag_agent_executor = AgentExecutor(
+    agent=chatbot_rag_agent,
     tools=tools,
     return_intermediate_steps=True,
     verbose=True,

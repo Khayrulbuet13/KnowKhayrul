@@ -1,11 +1,11 @@
 from pydantic import BaseModel
 
 
-class HospitalQueryInput(BaseModel):
+class ChatbotQueryInput(BaseModel):
     text: str
 
 
-class HospitalQueryOutput(BaseModel):
+class ChatbotQueryOutput(BaseModel):
     input: str
     output: str
     intermediate_steps: list[str]

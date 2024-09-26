@@ -1,11 +1,11 @@
-from agents.hospital_rag_agent import hospital_rag_agent_executor
+from agents.chatbot_rag_agent import chatbot_rag_agent_executor
 from fastapi import FastAPI
-from models.hospital_rag_query import HospitalQueryInput, HospitalQueryOutput
+from models.chatbot_rag_query import ChatbotQueryInput, ChatbotQueryOutput
 from utils.async_utils import async_retry
 
 app = FastAPI(
-    title="Hospital Chatbot",
-    description="Endpoints for a hospital system graph RAG chatbot",
+    title="AskKhayrul Chatbot",
+    description="Endpoints for a AskKhayrul RAG chatbot",
 )
 
 
@@ -16,7 +16,7 @@ async def invoke_agent_with_retry(query: str):
     are intermittent connection issues to external APIs.
     """
 
-    return await hospital_rag_agent_executor.ainvoke({"input": query})
+    return await chatbot_rag_agent_executor.ainvoke({"input": query})
 
 
 @app.get("/")
@@ -24,10 +24,10 @@ async def get_status():
     return {"status": "running"}
 
 
-@app.post("/hospital-rag-agent")
-async def query_hospital_agent(
-    query: HospitalQueryInput,
-) -> HospitalQueryOutput:
+@app.post("/chatbot-rag-agent")
+async def query_chatbot_agent(
+    query: ChatbotQueryInput,
+) -> ChatbotQueryOutput:
     query_response = await invoke_agent_with_retry(query.text)
     query_response["intermediate_steps"] = [
         str(s) for s in query_response["intermediate_steps"]
