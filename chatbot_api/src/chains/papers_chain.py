@@ -106,17 +106,17 @@ Task:
 Generate a Cypher query for a Neo4j graph database based on the provided schema and user question.
 
 Instructions:
-- **Output only the Cypher query. Do not include any explanations, comments, or additional text before or after the query.**
+- output only the Cypher query. Do not include any explanations, comments, or additional text before or after the query.
 - Use only the relationship types and properties defined in the schema below.
 - Do not introduce any new relationship types or properties.
-- **Do not include any comments or lines starting with '#' in the Cypher query.**
+- Do not include any comments or lines starting with '#' in the Cypher query.
 - Ensure the direction of relationships is correct.
 - Use proper aliasing for entities and relationships if necessary.
 - Do not perform any operations that modify the database (e.g., CREATE, DELETE).
 - Replace all placeholders with actual values derived from the question.
 - Use date ranges directly when filtering by educational levels (e.g., MS, PhD).
-- **All string values should be enclosed in single quotes `'like this'`.**
-- **Do not include placeholder names like 'author_name' or 'YourName'; use 'Khayrul' as the author name.**
+# - All string values should be enclosed in single quotes `'like this'`.
+# - Do not include placeholder names like 'author_name' or 'YourName'; use 'Khayrul' as the author name.**
 
 Schema:
 {schema}
@@ -130,38 +130,35 @@ Relationships:
 
 Example Questions and Cypher Queries:
 
-**Example 1:**
-Question: "How many papers did you publish during my MS?"
-Cypher Query:
+# How many papers did you publish during my MS?
 MATCH (p:Paper)
 WHERE p.date >= '2021-01-01' AND p.date < '2023-06-17' AND toLower(p.author) CONTAINS toLower('Khayrul')
 RETURN COUNT(p) AS paper_count
 
-**Example 2:**
-Question: "List the papers you published during my PhD."
-Cypher Query:
+# List the papers you published during my PhD.
 MATCH (p:Paper)
 WHERE p.date >= '2021-01-01' AND toLower(p.author) CONTAINS toLower('Khayrul')
 RETURN p.title AS paper_title
 
-**Example 3:**
-Question: What are the papers published by you as the first author?
+# What are the papers published by you as the first author?
 MATCH (p:Paper)
 WHERE p.first_author = 'True' AND toLower(p.author) CONTAINS toLower('Khayrul')
 RETURN p.title AS paper_title
 
-**Example 4:**
-Question: What are the papers you published?
+# Question: What are the papers you published?
 MATCH (p:Paper)
 WHERE toLower(p.author) CONTAINS toLower('Khayrul')
 RETURN p.title AS paper_title
 
-**Example 5:**
-Question: "What programming languages, tools, and libraries have you become most proficient in through your various research projects?"
-Cypher Query:
+# What programming languages, tools, and libraries have you become most proficient in through your various research projects?
 MATCH (p:Paper)-[:UTILIZES]->(s:Skill)
 WHERE s.skill_type IN ['Programming Languages', 'Tools and Libraries'] AND toLower(p.author) CONTAINS toLower('Khayrul')
 RETURN DISTINCT s.skill AS skill_used
+
+# Can you share insights into your master’s thesis and its key contributions?
+MATCH (p:Paper) WHERE p.title CONTAINS toLower('thesis')
+RETURN p.title AS thesis_title, p.abstract_novelty AS thesis_con, p.abstract_challenge AS thesis_challenge, p.abstract_result AS thesis_result
+
 
 **Note on Educational Levels and Date Ranges:**
 - PhD: p.date >= '2021-01-01'
@@ -232,3 +229,4 @@ papers_chain = GraphCypherQAChain.from_llm(
     validate_cypher=True,
     top_k=100,
 )
+

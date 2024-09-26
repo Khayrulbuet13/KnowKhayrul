@@ -41,6 +41,7 @@ def load_educational_data():
                 institution: row.Institution,
                 location: row.Location,
                 degree: row.Degree,
+                major: COALESCE(row.Major, 'Not Specified'),
                 gpa: COALESCE(row.GPA, 'Not Available'),
                 startDate: COALESCE(row.StartDate, 'Date Not Provided'),
                 endDate: COALESCE(row.EndDate, 'Date Not Provided'),
@@ -94,7 +95,7 @@ def load_educational_data():
         query_papers = """
         UNWIND $papers AS paper
         MERGE (p:Paper {
-            id: paper.doi,
+            id: paper.id,
             title: paper.title,
             author: paper.author,
             first_author: paper.first_author,

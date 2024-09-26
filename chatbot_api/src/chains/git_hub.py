@@ -46,45 +46,35 @@ Relationships:
 
 Example Questions and Cypher Queries:
 
-# What Could you provide an overview of your educational background?
-MATCH (e:Education)
-RETURN e.institution AS institution, e.degree AS degree, e.startDate AS start_date, e.endDate AS end_date, e.gpa AS gpa, e.awards AS awards;
-
 # What courses are included in the Ph.D. program?
-MATCH (e:Education {{degree: 'Ph.D.'}})-[:INCLUDED_IN]->(c:Course)
+MATCH (e:Education {{degree: 'Ph.D. in Mechanical Engineering and Mechanics'}})-[:INCLUDED_IN]->(c:Course)
 RETURN c.courseName AS course_name
 
 # Which courses did Khayrul take during his M.S. degree?
-MATCH (e:Education {{degree: 'M.S.'}})-[:INCLUDED_IN]->(c:Course)
+MATCH (e:Education {{degree: 'M.S. in Mechanical Engineering and Mechanics'}})-[:INCLUDED_IN]->(c:Course)
 RETURN c.CourseName AS course_name
 
 # How many courses were completed for the B.Sc. degree?
-MATCH (e:Education {{degree: 'B.Sc.'}})-[:INCLUDED_IN]->(c:Course)
+MATCH (e:Education {{degree: 'B.Sc. in Industrial and Production Engineering'}})-[:INCLUDED_IN]->(c:Course)
 RETURN COUNT(c) AS course_count
 
 # What is Khayrul's GPA for his Ph.D.?
-MATCH (e:Education {{degree: 'Ph.D.'}})
+MATCH (e:Education {{degree: 'Ph.D. in Mechanical Engineering and Mechanics'}})
 RETURN e.gpa AS gpa
 LIMIT 1
 
-# Did you have any courses related to machine learning?
-MATCH (e:Education)-[:INCLUDED_IN]->(c:Course)
-WHERE toLower(c.courseName) CONTAINS toLower('machine learning')
-RETURN c.courseName AS course_name, e.degree AS degree
+What courses are included in the Ph.D. program?
+MATCH (e:Education {degree: 'Ph.D. in Mechanical Engineering and Mechanics'})-[:INCLUDED_IN]->(c:Course)
+RETURN c.courseName AS course_name
 
-
-# What is the highest degree you completed?
-MATCH (e:Education)
-RETURN e.degree AS degree
-ORDER BY e.endDate DESC
-LIMIT 1
 
 String category values:
 - Institutions: 'Lehigh University', 'IBM', 'Bangladesh University of Engineering and Technology'
 - Locations: 'Pennsylvania, USA', 'Online', 'Dhaka, Bangladesh'
-- Degrees: 'Ph.D.', 'M.S.', 'Professional Certificate in Data Science', 'B.Sc.'
+- Degrees: 'Ph.D. in Mechanical Engineering and Mechanics', 'M.S. in Mechanical Engineering and Mechanics',
+            'Professional Certificate in Data Science', 'B.Sc. in Industrial and Production Engineering'
 - Awards: 'P.C. Rossin College of Engineering fellowship', 'SCEA- PTAK prize global case study competition scholarship'
-- Majors: 'Mechanical Engineering and Mechanics', 'Industrial and Production Engineering'
+
 The question is:
 {question}
 """

@@ -11,76 +11,80 @@ with st.sidebar:
     st.header("About")
     st.markdown(
         """
-        This chatbot interfaces with a
-        [LangChain](https://python.langchain.com/docs/get_started/introduction)
-        agent designed to answer questions about the hospitals, patients,
-        visits, physicians, and insurance payers in  a fake hospital system.
-        The agent uses  retrieval-augment generation (RAG) over both
-        structured and unstructured data that has been synthetically generated.
+        This chatbot is here to help you explore Khayrul's research and publication. 
+        It provides insights into the key concepts behind his work in an interactive way.
+        Powered by a [LangChain](https://python.langchain.com/docs/get_started/introduction) agent, 
+        it uses retrieval-augmented generation (RAG) to pull information from structured data stored 
+        in a Neo4j database and unstructured data managed by ChromaDB. The system is containerized 
+        with Docker, ensuring flexibility and scalability.
         """
     )
 
     st.header("Example Questions")
-    st.markdown("- Can you describe the key methodologies and techniques you utilized \
-                in your most recent publication on 'Multiplex Image Machine Learning'?")
+    # st.markdown(
+    #     """- Tell me about your educational background"""
+    # )
+
+    # st.markdown("- Can you describe the key methodologies and techniques you utilized \
+    #             in your most recent publication on 'Multiplex Image Machine Learning'?")
     
+    
+    # st.markdown(
+    #     """- Can you explain the overall idea of the paper titled 'Multiplex Image Machine Learning?"""
+    # )
+    # st.markdown(
+    #     "- Tell me about your master thesis?"
+    # )
+    # st.markdown(
+    #     """- Did you publish any first-author papers during PhD?"""
+    # )
+
+    # st.markdown(
+    #     """- Did you have any course related to machine learning?"""
+    # )
+
+    # st.markdown(
+    #     """- From where you got your master degree?"""
+    # )
+
     st.markdown(
-        """- What is the current wait time at wallace-hamilton hospital?"""
+    """- Could you provide an overview of your educational background?"""
     )
+
     st.markdown(
-        """- At which hospitals are patients complaining about billing and
-        insurance issues?"""
+        """- Can you elaborate on the methodologies and techniques you employed in your recent publication on 'Multiplex Image Machine Learning'?"""
     )
+
     st.markdown(
-        "- What is the average duration in days for closed emergency visits?"
+        """- Could you explain the main concept and significance of your paper titled 'Multiplex Image Machine Learning'?"""
     )
+
     st.markdown(
-        """- What are patients saying about the nursing staff at
-        Castaneda-Hardy?"""
+        """- Can you share insights into your master’s thesis and its key contributions?"""
     )
+
     st.markdown(
-        "- What was the total billing amount charged to each payer for 2023?"
+        """- Tell me about your research during your Ph.D.?"""
     )
-    st.markdown("- What is the average billing amount for medicaid visits?")
+
     st.markdown(
-        "- Which physician has the lowest average visit duration in days?"
+        """- Did your coursework include any subjects related to machine learning?"""
     )
-    st.markdown("- How much was billed for patient 789's stay?")
+
     st.markdown(
-        """- Which state had the largest percent increase in medicaid visits
-        from 2022 to 2023?"""
+        """- Where did you complete your master's degree, and what was the focus of your studies?"""
     )
-    st.markdown(
-        "- What is the average billing amount per day for Aetna patients?"
-    )
-    st.markdown(
-        """- How many reviews have been written from
-                patients in Florida?"""
-    )
-    st.markdown(
-        """- For visits that are not missing chief complaints,
-       what percentage have reviews?"""
-    )
-    st.markdown(
-        """- What is the percentage of visits that have reviews for
-        each hospital?"""
-    )
-    st.markdown(
-        """- Which physician has received the most reviews for this visits
-        they've attended?"""
-    )
-    st.markdown("- What is the ID for physician James Cooper?")
-    st.markdown(
-        """- List every review for visits treated by physician 270.
-        Don't leave any out."""
-    )
+
+
+
 
 
 st.title("AskKhayrul!")
 st.info(
-    """Hello! I'm AskKhayrul, Khayrul's AI assistant. I'm here to provide 
-    information about his background, education, work experience, and publications.
-    I'll respond as if I’m Khayrul himself, so please feel free to ask any questions!
+    """
+    Hello! I'm AskKhayrul, Khayrul's AI assistant. I can explain key concepts from 
+    his papers and answer questions about his education and work experience as if 
+    I’m Khayrul himself. Feel free to ask!
 """
 )
 

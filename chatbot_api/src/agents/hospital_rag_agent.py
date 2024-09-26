@@ -53,25 +53,41 @@ def papers_qa_tool_func(input_text):
 
 
 tools = [
+    # Tool(
+    #     name="EducationGraph",
+    #     func=education_chain.invoke,
+    #     description="""Use this tool to answer questions about your education background, 
+    #     including institutions, degrees, GPA, thesis titles, and courses taken. 
+    #     Respond in the first person.""",
+    # ),
+
     Tool(
         name="EducationGraph",
         func=education_chain.invoke,
         description="""Use this tool to answer questions about your education background, 
         including institutions, degrees, GPA, thesis titles, and courses taken. 
-        Respond in the first person.""",
+        Always provide the entire question as input to this tool. For example, 
+        if asked "What courses are included in the Ph.D. program?", 
+        pass the entire question to the tool.""",
     ),
+
     Tool(
         name="PaperGraph",
         func=papers_chain.invoke,
         description="""Use this tool to answer questions about your published papers and 
-        the skills you've utilized or gained through them. Respond in the first person.""",
+        the skills you've utilized or gained through them. Always provide the entire 
+        question as input to this tool. For example, if asked 
+        "What are the papers published by you as the first author?", 
+        pass the entire question to the tool.""",
     ),
     Tool(
         name="PapersQA",
         func=papers_qa_tool_func,
         description="""Use this tool to answer detailed questions about the content,
-        methodology, results, or specifics of **your** published papers. 
-        Respond in the first person.""",
+        methodology, results, or specifics of your published papers. 
+        Always provide the entire question as input to this tool. For example, if asked 
+        "Could you explain the main concept and significance of your paper titled 'Multiplex Image Machine Learning'?", 
+        pass the entire question to the tool.""",
     ),
 ]
 

@@ -1,9 +1,13 @@
 import os
 from langchain.chains import RetrievalQA
 from langchain.agents import AgentExecutor, Tool, create_openai_functions_agent
-from langchain_community.chat_models import ChatOpenAI
-from langchain_community.vectorstores import Chroma
-from langchain_community.embeddings import OpenAIEmbeddings
+# from langchain_community.chat_models import ChatOpenAI
+from langchain_openai import ChatOpenAI
+# from langchain_community.vectorstores import Chroma
+from langchain_chroma import Chroma
+# from langchain_community.embeddings import OpenAIEmbeddings
+from langchain_openai import OpenAIEmbeddings
+
 from langchain import hub
 
 # Initialize embeddings and vector store
