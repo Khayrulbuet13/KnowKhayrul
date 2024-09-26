@@ -262,5 +262,30 @@
             "result": "Achieved a remarkable 98.3% accuracy in cell classification, significantly improving specificity and effectiveness for classifying white blood cells and tumor cells."
         },
         "contribution": "As the first author, I conceptualized, developed and implemented the Multiplex Image Machine Learning (MIML) framework, integrating label-free cell images with biomechanical data for precise cell classification. I led the machine learning training, visualization, and analysis, enhancing specificity in classifying white blood and tumor cells."
+    },
+    {
+        "id": 13,
+        "title": "Thesis: Predicting Drug Loading in Extracellular Vesicles through Coarse-Grained Molecular Dynamics Simulation",
+        "author": "Khayrul Islam, Yaling Liu",
+        "first_author": "True",
+        "journaltitle": "Physical chemistry chemical physics: PCCP",
+        "publisher": "Royal Society of Chemistry",
+        "volume": "25",
+        "issue": "17",
+        "pages": "12308--12321",
+        "date": "2023-05-03",
+        "doi": "10.1039/d3cp00387f",
+        "url": "https://pubs.rsc.org/en/content/articlehtml/2023/cp/d3cp00387f",
+        "keywords": "nanopore formation, extracellular vesicles, drug loading, molecular dynamics, nanofluidic channels",
+        "skills": "25, 36, 46, 50, 51, 52",
+        "abstract": {
+            "challenge": "Lack of understanding of nanopore formation and cargo loading during EV squeezing.",
+            "novelty": "Developed a systemic algorithm using coarse-grained molecular dynamics to simulate nanopore formation in EVs.",
+            "result": "Provided design guidelines for nanochannel geometry and squeezing velocity to optimize drug loading without damaging the EVs."
+        },
+        "contribution": "Developed a systemic algorithm using coarse-grained molecular dynamics to model nanopore formation in extracellular vesicles (EVs), optimizing nanochannel geometry and squeezing velocity for enhanced drug loading efficiency. Conducted simulations, visualized results, and provided design guidelines to prevent EV damage."
     }
+    
+
+
 ]
