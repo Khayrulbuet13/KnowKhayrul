@@ -78,4 +78,15 @@ ID,Education_ID,CourseID,CourseName,CourseGrade
 4_IPE411,4,IPE411,Industrial and Business Management,B
 4_IPE427,4,IPE427,Marketing Management,B
 4_IPE470,4,IPE470,Industrial Simulation Sessional,B+
-4_IPE480,4,IPE480,Business Communication Seminar II,B+
+3_DSA1,3,DSA1,Machine Learning with Python,A
+3_DSA2,3,DSA2,Python for Data Science, AI & Development,A
+3_DSA3,3,DSA3,Data Visualization with Python,A
+3_DSA4,3,DSA4,Python Project for Data Science,A
+3_DSA5,3,DSA5,Data Analysis with Python,A
+3_DSA6,3,DSA6,Databases and SQL for Data Science with Python,A
+3_DSA7,3,DSA7,What is Data Science?,A
+3_DSA8,3,DSA8,Data Scientist Career Guide and Interview Preparation,A
+3_DSA9,3,DSA9,Applied Data Science Capstone,A
+3_DSA10,3,DSA10,Generative AI: Elevate Your Data Science Career,A
+3_DSA11,3,DSA11,Data Science Methodology,A
+3_DSA12,3,DSA12,Tools for Data Science,A
