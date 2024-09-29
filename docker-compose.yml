@@ -6,6 +6,13 @@ services:
       context: ./chatbot_neo4j_etl
     env_file:
       - .env
+    deploy:
+      resources:
+        limits:
+          cpus: "0.1"
+          memory: "64M"
+    networks:
+      - isolated_network
 
   chatbot_api:
     build:
@@ -16,6 +23,13 @@ services:
       - chatbot_neo4j_etl
     ports:
       - "8000:8000"
+    deploy:
+      resources:
+        limits:
+          cpus: "0.6"
+          memory: "768M"
+    networks:
+      - isolated_network
 
   chatbot_frontend:
     build:
@@ -26,3 +40,14 @@ services:
       - chatbot_api
     ports:
       - "8501:8501"
+    deploy:
+      resources:
+        limits:
+          cpus: "0.1"
+          memory: "128M"
+    networks:
+      - isolated_network
+
+networks:
+  isolated_network:
+    driver: bridge
