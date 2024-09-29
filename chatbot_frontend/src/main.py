@@ -1,5 +1,4 @@
 import os
-
 import requests
 import streamlit as st
 
@@ -21,34 +20,9 @@ with st.sidebar:
     )
 
     st.header("Example Questions")
-    # st.markdown(
-    #     """- Tell me about your educational background"""
-    # )
-
-    # st.markdown("- Can you describe the key methodologies and techniques you utilized \
-    #             in your most recent publication on 'Multiplex Image Machine Learning'?")
     
-    
-    # st.markdown(
-    #     """- Can you explain the overall idea of the paper titled 'Multiplex Image Machine Learning?"""
-    # )
-    # st.markdown(
-    #     "- Tell me about your master thesis?"
-    # )
-    # st.markdown(
-    #     """- Did you publish any first-author papers during PhD?"""
-    # )
-
-    # st.markdown(
-    #     """- Did you have any course related to machine learning?"""
-    # )
-
-    # st.markdown(
-    #     """- From where you got your master degree?"""
-    # )
-
     st.markdown(
-    """- Could you provide an overview of your educational background?"""
+        """- Could you provide an overview of your educational background?"""
     )
 
     st.markdown(
@@ -56,7 +30,7 @@ with st.sidebar:
     )
 
     st.markdown(
-        """- Could you explain the main concept and significance of your paper titled 'Multiplex Image Machine Learning'?"""
+        """- Could you explain the main concept and significance of your paper titled 'Coarse-grained molecular simulation of extracellular vesicle squeezing for drug loading'?"""
     )
 
     st.markdown(
@@ -64,7 +38,7 @@ with st.sidebar:
     )
 
     st.markdown(
-        """- Tell me about your research during your Ph.D.?"""
+        """- Tell me about your research during your Ph.D."""
     )
 
     st.markdown(
@@ -75,17 +49,23 @@ with st.sidebar:
         """- Where did you complete your master's degree, and what was the focus of your studies?"""
     )
 
+# Title with an image next to the name
+left_column, central_column, right_column = st.columns([1, 5, 1])
+
+with left_column:
+    # st.image("khayrul.png", width=80)  # Add your image path here
+    st.image("image/khayrul.png", use_column_width=True)
 
 
+with central_column:
+    st.title("AskKhayrul!")
 
-
-st.title("AskKhayrul!")
 st.info(
     """
     Hello! I'm AskKhayrul, Khayrul's AI assistant. I can explain key concepts from 
     his papers and answer questions about his education and work experience as if 
     I’m Khayrul himself. Feel free to ask!
-"""
+    """
 )
 
 if "messages" not in st.session_state:
@@ -100,7 +80,14 @@ for message in st.session_state.messages:
             with st.status("How was this generated", state="complete"):
                 st.info(message["explanation"])
 
+
+
+# Assuming you've placed the assistant image in the correct path
+assistant_avatar = "/app/image/khayrul.png"  # Update the path based on where the image is stored
+
+# For assistant response:
 if prompt := st.chat_input("What do you want to know?"):
+    # User message with a custom avatar
     st.chat_message("user").markdown(prompt)
 
     st.session_state.messages.append({"role": "user", "output": prompt})
@@ -119,7 +106,8 @@ if prompt := st.chat_input("What do you want to know?"):
             Please try again or rephrase your message."""
             explanation = output_text
 
-    st.chat_message("assistant").markdown(output_text)
+    # Assistant message with a custom avatar
+    st.chat_message("assistant", avatar=assistant_avatar).markdown(output_text)
     st.status("How was this generated?", state="complete").info(explanation)
 
     st.session_state.messages.append(
@@ -129,3 +117,5 @@ if prompt := st.chat_input("What do you want to know?"):
             "explanation": explanation,
         }
     )
+
+
