@@ -42,7 +42,7 @@ with st.sidebar:
     )
 
     st.markdown(
-        """- Did your coursework include any subjects related to machine learning?"""
+        """- Did your coursework include any subjects related to data science?"""
     )
 
     st.markdown(
