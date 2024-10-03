@@ -48,6 +48,20 @@ services:
     networks:
       - isolated_network
 
+  certbot:
+    image: certbot/certbot
+    volumes:
+      - /etc/letsencrypt:/etc/letsencrypt
+      - /var/lib/letsencrypt:/var/lib/letsencrypt
+    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h; done'"
+    networks:
+      - isolated_network
+    deploy:
+      resources:
+        limits:
+          cpus: "0.1"
+          memory: "64M"
+
 networks:
   isolated_network:
     driver: bridge
